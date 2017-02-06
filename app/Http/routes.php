@@ -19,3 +19,23 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+Route::group(['middleware'=>['admin']], function (){
+    Route::get('admin/dashboard', function (){
+    return 'bienvenido';
+    
+     Route::get('admin/posts', function (){
+    return 'listado de post';
+    
+     Route::get('admin/posts/create', function (){
+    return 'Crear posts [formulario]';
+    
+     Route::post('admin/posts', function (){
+    return 'store enbase de dato';
+    
+    
+    
+    
+});
+    
+});
+
